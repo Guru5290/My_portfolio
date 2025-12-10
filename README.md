@@ -17,6 +17,16 @@ Option A — GitHub Actions (recommended):
 
 2. Commit and push your changes to `main`. GitHub will run the workflow and publish the site. The `CNAME` file (if present) will be used for custom domains.
 
+Example (this repository):
+
+```powershell
+git remote add origin https://github.com/Guru5290/My_portfolio.git
+git branch -M main
+git push -u origin main
+```
+
+After a few minutes the site will be available at `https://Guru5290.github.io/My_portfolio/` unless you set a custom domain.
+
 Option B — npm + `gh-pages` (manual deploy):
 
 1. Install dependencies:
