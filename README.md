@@ -48,10 +48,13 @@ Contact links & avatar
 - Replace `youremail@example.com`, `https://github.com/<your-username>` and LinkedIn URL in the HTML files with your real contact details.
 - Replace `assets/avatar.svg` with a real photo or avatar named `avatar.svg` (or update the `src` to a PNG/JPG in `assets/`).
 
-Custom domain (optional)
+Custom domain
 
-- Replace the placeholder `CNAME` file with your domain (for example `www.yourdomain.com`). GitHub Pages will use that CNAME when deploying.
+The site is configured to use `DismasKarimi.com`. To complete setup:
 
-If you want, I can:
-- Add your real email, GitHub and LinkedIn links now and replace the placeholder avatar with an uploaded photo if you provide one.
-- Or use the `gh-pages` npm flow instead of Actions — tell me which you prefer.
+1. On GitHub **Settings → Pages**, ensure **Build and deployment** is set to `GitHub Actions` and **Save**.
+2. Point your domain registrar's DNS to GitHub Pages:
+   - Add an `A` record pointing to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - Or (if supported) add a `CNAME` record pointing to `Guru5290.github.io`
+
+After DNS propagates (can take a few minutes to hours), your site will be available at `https://DismasKarimi.com`.
