@@ -1,0 +1,41 @@
+/* Minimal modern responsive styles */
+:root{
+  --bg:#0b1020;
+  --card:#0f1724;
+  --muted:#94a3b8;
+  --accent:#4f46e5;
+  --accent-2:#06b6d4;
+  --text:#e6eef8;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+  background:linear-gradient(180deg,var(--bg),#071129 60%);
+  color:var(--text);
+}
+.container{max-width:980px;margin:0 auto;padding:24px}
+.site-header{background:transparent;padding:12px 0}
+.header-inner{display:flex;justify-content:space-between;align-items:center}
+.brand{color:var(--text);font-weight:700;text-decoration:none}
+.nav a{color:var(--muted);margin-left:16px;text-decoration:none}
+.nav a:hover{color:var(--text)}
+.hero{display:flex;gap:24px;align-items:center;padding:36px 0}
+.hero-left{flex:1}
+.hero-right{width:220px}
+.avatar{width:100%;height:auto;border-radius:12px}
+h1{font-size:28px;margin:0 0 8px}
+.lede{color:var(--muted);font-size:16px;margin-top:6px}
+.cta{display:inline-block;margin-right:12px;padding:10px 16px;border-radius:8px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;text-decoration:none}
+.cta.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+.about{margin-top:18px;padding:18px;background:rgba(255,255,255,0.02);border-radius:10px}
+.site-footer{padding:18px 0;color:var(--muted)}
+section h2{margin-top:18px}
+ul{color:var(--muted)}
+
+@media (max-width:800px){
+  .hero{flex-direction:column}
+  .hero-right{width:160px}
+  .nav{display:flex;gap:8px}
+}
