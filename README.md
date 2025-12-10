@@ -8,29 +8,40 @@ Files:
 - `skills.html` — Skills and hobbies
 - `css/style.css` — Site styles
 
+
 How to publish on GitHub Pages
 
-1. Initialize a git repo (if you haven't):
+Option A — GitHub Actions (recommended):
+
+1. The repository contains a workflow at `.github/workflows/pages.yml` that will automatically publish the repository root to GitHub Pages whenever you push to `main`.
+
+2. Commit and push your changes to `main`. GitHub will run the workflow and publish the site. The `CNAME` file (if present) will be used for custom domains.
+
+Option B — npm + `gh-pages` (manual deploy):
+
+1. Install dependencies:
 
 ```powershell
-git init ; git add . ; git commit -m "Initial site scaffold"
+npm install
 ```
 
-2. Create a GitHub repository (use GitHub website). Add it as `origin` and push:
+2. Deploy using the `deploy` script in `package.json`:
 
 ```powershell
-git remote add origin https://github.com/<your-username>/<repo-name>.git
-git branch -M main
-git push -u origin main
+npm run deploy
 ```
 
-3. On GitHub, go to **Settings → Pages** and set the source to the `main` branch and `/ (root)` folder, then save.
+This will publish the repository root to a `gh-pages` branch. You can use either option — GitHub Actions will keep Pages updated automatically on pushes to `main`.
 
-After a few minutes your site will be available at `https://<your-username>.github.io/<repo-name>/`.
+Contact links & avatar
 
-Alternative (deploy to `gh-pages` branch) — if you prefer automated deploys using `gh-pages` npm package, I can add a simple `package.json` and deploy script.
+- Replace `youremail@example.com`, `https://github.com/<your-username>` and LinkedIn URL in the HTML files with your real contact details.
+- Replace `assets/avatar.svg` with a real photo or avatar named `avatar.svg` (or update the `src` to a PNG/JPG in `assets/`).
 
-If you'd like, I can also:
-- Add your contact email and links
-- Add images or a real avatar
-- Add a `CNAME` for a custom domain
+Custom domain (optional)
+
+- Replace the placeholder `CNAME` file with your domain (for example `www.yourdomain.com`). GitHub Pages will use that CNAME when deploying.
+
+If you want, I can:
+- Add your real email, GitHub and LinkedIn links now and replace the placeholder avatar with an uploaded photo if you provide one.
+- Or use the `gh-pages` npm flow instead of Actions — tell me which you prefer.

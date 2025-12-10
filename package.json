@@ -1,0 +1,11 @@
+{
+  "name": "dismas-portfolio",
+  "version": "1.0.0",
+  "description": "Personal 3-page portfolio site for Dismas — Mechatronics & WAAM research",
+  "scripts": {
+    "deploy": "gh-pages -d . -b gh-pages"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
